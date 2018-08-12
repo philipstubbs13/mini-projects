@@ -19,6 +19,13 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // When the user signs in, this checks the Firebase database to see if they were already previously authenticated. If they were, we set their user details back into the state.
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user });
+      } 
+    });
+
     const itemsRef = firebase.database().ref('items');
     itemsRef.on('value', (snapshot) => {
       let items = snapshot.val();
