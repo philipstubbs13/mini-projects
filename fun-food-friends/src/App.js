@@ -91,9 +91,10 @@ class App extends Component {
     const itemsRef = firebase.database().ref('items');
     // here we grab the item the user typed in (as well as their username) from the state,
     // and package it into an object so we ship it off to our Firebase database.
+    // grab username right off of this.state.user
     const item = {
       title: this.state.currentItem,
-      user: this.state.username
+      user: this.state.user.displayName || this.state.user.email
     }
     // similar to the Array.push method, 
     // this sends a copy of our object so that it can be stored in Firebase
@@ -120,30 +121,44 @@ class App extends Component {
               
             </div>
         </header>
-        <div className='container'>
-          <section className='add-item'>
-              <form onSubmit={this.handleSubmit}>
-                <input type="text" name="username" placeholder="What's your name?" onChange={this.handleChange} value={this.state.username} />
-                <input type="text" name="currentItem" placeholder="What are you bringing?" onChange={this.handleChange} value={this.currentItem} />
-                <button>Add Item</button>
-              </form>
-          </section>
-          <section className='display-item'>
-            <div className='wrapper'>
-            <ul>
-              {this.state.items.map((item) => {
-                return (
-                  <li key={item.id}>
-                    <h3>{item.title}</h3>
-                    <p>brought by: {item.user}</p>
-                    <button onClick={() => this.removeItem(item.id)}>Remove Item</button>
-                  </li>
-                )
-              })}
-            </ul>
+        {this.state.user ?
+          <div>
+            <div className='user-profile'>
+              <img src={this.state.user.photoURL} />
             </div>
-          </section>
-        </div>
+            <div className='container'>
+              {/* Here we set the value of our username field to this.state.user.displayName if it exists (sometimes users don't have their display name set), and if it doesn't we set it to this.state.user.email. This will lock the input and make it so that user's names or email are automatically entered into the Add Item field for them. */}
+              <section className='add-item'>
+                <form onSubmit={this.handleSubmit}>
+                  <input type="text" name="username" placeholder="What's your name?" value={this.state.user.displayName || this.state.user.email} />
+                  <input type="text" name="currentItem" placeholder="What are you bringing?" onChange={this.handleChange} value={this.state.currentItem} />
+                  <button>Add Item</button>
+                </form>
+              </section>
+              <section className='display-item'>
+                <div className="wrapper">
+                  <ul>
+                    {this.state.items.map((item) => {
+                      return (
+                        <li key={item.id}>
+                          <h3>{item.title}</h3>
+                          <p>brought by: {item.user}
+                            {item.user === this.state.user.displayName || item.user === this.state.user.email ?
+                              <button onClick={() => this.removeItem(item.id)}>Remove Item</button> : null}
+                          </p>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </div>
+          :
+          <div className='wrapper'>
+            <p>You must be logged in to see the potluck list and submit to it.</p>
+          </div>
+        }
       </div>
     );
   }
