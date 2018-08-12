@@ -10,4 +10,7 @@ var config = {
   messagingSenderId: "883061115772"
 };
 firebase.initializeApp(config);
+// This exports the auth module of Firebase, as well as the Google Auth Provider so that we'll be able to use Google Authentication for sign in anywhere inside of our application
+export const provider = new firebase.auth.GoogleAuthProvider();
+export const auth = firebase.auth();
 export default firebase;
