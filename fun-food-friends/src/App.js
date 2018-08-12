@@ -1,3 +1,4 @@
+// https://css-tricks.com/firebase-react-part-2-user-authentication/
 import React, { Component } from 'react';
 import firebase, { auth, provider } from './firebase.js';
 import './App.css';
@@ -14,6 +15,7 @@ class App extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.removeItem = this.removeItem.bind(this);
     this.login = this.login.bind(this); 
     this.logout = this.logout.bind(this);
   }
