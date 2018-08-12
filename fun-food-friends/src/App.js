@@ -137,6 +137,7 @@ class App extends Component {
               </section>
               <section className='display-item'>
                 <div className="wrapper">
+                  {/* Instead of displaying the remove button for each item, we write a quick ternary that checks to see if the person who is bringing a specific item matches the user who is currently signed in. If there's a match, we provide them with a button to remove that item: */}
                   <ul>
                     {this.state.items.map((item) => {
                       return (
