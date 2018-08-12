@@ -40,6 +40,12 @@ class App extends Component {
     });
   }
 
+  // Here, instead of grabbing all of the items as we did before when adding a new item, we instead look up a specific item by its key (that strange -Kk8lHSMqC5oP6Qai0Vx key from before). We can then call firebase.database()'s remove method, which strips it from the page.
+  removeItem(itemId) {
+    const itemRef = firebase.database().ref(`/items/${itemId}`);
+    itemRef.remove();
+  }
+
   handleSubmit(e) {
     // we need to prevent the default behavior of the form, 
     // which if we don't will cause the page to refresh when you hit the submit button.
@@ -90,6 +96,7 @@ class App extends Component {
                   <li key={item.id}>
                     <h3>{item.title}</h3>
                     <p>brought by: {item.user}</p>
+                    <button onClick={() => this.removeItem(item.id)}>Remove Item</button>
                   </li>
                 )
               })}
