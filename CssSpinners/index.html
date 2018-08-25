@@ -1,0 +1,29 @@
+<!-- Simple pure CSS spinners -->
+<!-- https://www.youtube.com/watch?v=BxpjA9t4dJE&t=101s -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Css Spinners</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Hello, welcome to my website</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolores fugiat, voluptas delectus quidem sint reiciendis voluptate eveniet harum, excepturi perspiciatis eos labore at id quis! Numquam eligendi repellendus vero quod cupiditate reiciendis neque? Voluptas inventore adipisci rerum illum quis accusantium possimus sit? Deserunt dolores, doloremque quod molestias atque earum?</p>
+    </div>
+    
+    <script>
+        document.querySelector('.main p').style.display = 'none';
+        document.querySelector('.main').classList.add('spinner-1');
+
+        // Mimic server req
+        setTimeout(() => {
+            document.querySelector('.main').classList.remove('spinner-1');
+            document.querySelector('.main p').style.display = 'block';
+        }, 4000);
+    </script>
+</body>
+</html>
