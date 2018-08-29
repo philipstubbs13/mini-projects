@@ -48,6 +48,8 @@ class AddContact extends Component {
 			phone: '',
 			errors: [],
 		});
+
+		this.props.history.push('/');
 	};
 
 	onChange = e => this.setState({ [e.target.name]: e.target.value });
