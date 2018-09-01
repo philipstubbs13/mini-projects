@@ -1,101 +1,126 @@
 import React, { Component } from 'react';
 import TextInputGroup from '../layout/TextInputGroup';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getContact } from '../../actions/contactActions';
 
 class EditContact extends Component {
-  state = {
-    name: '',
-    email: '',
-    phone: '',
-    errors: {}
-  };
+	state = {
+		name: '',
+		email: '',
+		phone: '',
+		errors: {},
+	};
 
-  onSubmit = (e) => {
-    e.preventDefault();
+	componentWillReceiveProps(nextProps, nextState) {
+		const { name, email, phone } = nextProps.contact;
+		this.setState({
+			name,
+			email,
+			phone,
+		});
+	}
 
-    const { name, email, phone } = this.state;
+	componentDidMount() {
+		const { id } = this.props.match.params;
+		this.props.getContact(id);
+	}
 
-    // Check For Errors
-    if (name === '') {
-      this.setState({ errors: { name: 'Name is required' } });
-      return;
-    }
+	onSubmit = e => {
+		e.preventDefault();
 
-    if (email === '') {
-      this.setState({ errors: { email: 'Email is required' } });
-      return;
-    }
+		const { name, email, phone } = this.state;
 
-    if (phone === '') {
-      this.setState({ errors: { phone: 'Phone is required' } });
-      return;
-    }
+		// Check For Errors
+		if (name === '') {
+			this.setState({ errors: { name: 'Name is required' } });
+			return;
+		}
 
-    const updContact = {
-      name,
-      email,
-      phone
-    };
+		if (email === '') {
+			this.setState({ errors: { email: 'Email is required' } });
+			return;
+		}
 
-    const { id } = this.props.match.params;
+		if (phone === '') {
+			this.setState({ errors: { phone: 'Phone is required' } });
+			return;
+		}
 
-    //// UPDATE CONTACT ////
+		const updContact = {
+			name,
+			email,
+			phone,
+		};
 
-    // Clear State
-    this.setState({
-      name: '',
-      email: '',
-      phone: '',
-      errors: {}
-    });
+		const { id } = this.props.match.params;
 
-    this.props.history.push('/');
-  };
+		//// UPDATE CONTACT ////
 
-  onChange = e => this.setState({ [e.target.name]: e.target.value });
+		// Clear State
+		this.setState({
+			name: '',
+			email: '',
+			phone: '',
+			errors: {},
+		});
 
-  render() {
-    const { name, email, phone, errors } = this.state;
+		this.props.history.push('/');
+	};
 
-    return (
-      <div className="card mb-3">
-        <div className="card-header">Edit Contact</div>
-        <div className="card-body">
-          <form onSubmit={this.onSubmit}>
-            <TextInputGroup
-              label="Name"
-              name="name"
-              placeholder="Enter Name"
-              value={name}
-              onChange={this.onChange}
-              error={errors.name}
-            />
-            <TextInputGroup
-              label="Email"
-              name="email"
-              type="email"
-              placeholder="Enter Email"
-              value={email}
-              onChange={this.onChange}
-              error={errors.email}
-            />
-            <TextInputGroup
-              label="Phone"
-              name="phone"
-              placeholder="Enter Phone"
-              value={phone}
-              onChange={this.onChange}
-              error={errors.phone}
-            />
-            <input
-              type="submit"
-              value="Update Contact"
-              className="btn btn-light btn-block"
-            />
-          </form>
-        </div>
-      </div>
-    );
-  }
+	onChange = e => this.setState({ [e.target.name]: e.target.value });
+
+	render() {
+		const { name, email, phone, errors } = this.state;
+
+		return (
+			<div className="card mb-3">
+				<div className="card-header">Edit Contact</div>
+				<div className="card-body">
+					<form onSubmit={this.onSubmit}>
+						<TextInputGroup
+							label="Name"
+							name="name"
+							placeholder="Enter Name"
+							value={name}
+							onChange={this.onChange}
+							error={errors.name}
+						/>
+						<TextInputGroup
+							label="Email"
+							name="email"
+							type="email"
+							placeholder="Enter Email"
+							value={email}
+							onChange={this.onChange}
+							error={errors.email}
+						/>
+						<TextInputGroup
+							label="Phone"
+							name="phone"
+							placeholder="Enter Phone"
+							value={phone}
+							onChange={this.onChange}
+							error={errors.phone}
+						/>
+						<input type="submit" value="Update Contact" className="btn btn-light btn-block" />
+					</form>
+				</div>
+			</div>
+		);
+	}
 }
 
-export default EditContact;
+EditContact.propTypes = {
+	contact: PropTypes.object.isRequired,
+	getContact: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = state => ({
+	contact: state.contact.contact,
+});
+
+export default connect(
+	mapStateToProps,
+	{ getContact }
+)(EditContact);
