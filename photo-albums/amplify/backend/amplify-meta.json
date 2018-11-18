@@ -1,0 +1,72 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "photoalbums-20181117161541-authRole",
+			"UnauthRoleArn": "arn:aws:iam::155534365205:role/photoalbums-20181117161541-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::155534365205:role/photoalbums-20181117161541-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "photoalbums-20181117161541-deployment",
+			"UnauthRoleName": "photoalbums-20181117161541-unauthRole",
+			"StackName": "photoalbums-20181117161541",
+			"StackId": "arn:aws:cloudformation:us-east-1:155534365205:stack/photoalbums-20181117161541/52391420-eab6-11e8-a848-500c28635c99"
+		}
+	},
+	"auth": {
+		"cognito23cef5ed": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/photoalbums-20181117161541-deployment/amplify-cfn-templates/auth/cognito23cef5ed-cloudformation-template.yml",
+				"logicalId": "authcognito23cef5ed"
+			},
+			"lastPushTimeStamp": "2018-11-18T01:10:41.087Z",
+			"output": {
+				"AppClientSecret": "15g5r2f9fabue0vq8gf3irrcb8ros0e7u7vqcgqnu4b5clcqhomv",
+				"UserPoolId": "us-east-1_YrRAO2YZe",
+				"AppClientIDWeb": "4lo3r580pbc0lulfikditchof8",
+				"AppClientID": "6fd1radjnfscmhpt54nphm9087",
+				"IdentityPoolId": "us-east-1:7bf381f9-0d68-401f-81b0-ee4a0641fcda",
+				"IdentityPoolName": "cognito23cef5ed_identitypool_23cef5ed",
+				"UserPoolName": "cognito23cef5ed_userpool_23cef5ed"
+			},
+			"lastPushDirHash": "VdUD6xk8fT4sQbpPluhgWQWm1lI="
+		}
+	},
+	"api": {
+		"photoalbums": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "AMAZON_COGNITO_USER_POOLS",
+				"GraphQLAPIIdOutput": "srmrwcl6sne3bdxgz3sso7sw6a",
+				"GraphQLAPIEndpointOutput": "https://56gph6deorcchdqysfmwfqvldq.appsync-api.us-east-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-ddavqwjkgbbv3hmc6b3tlw6dmy",
+				"AuthCognitoUserPoolIdOutput": "us-east-1_YrRAO2YZe",
+				"AuthCognitoUserPoolNativeClientId": "See UserPool: us-east-1_YrRAO2YZe",
+				"AuthCognitoUserPoolJSClientId": "See UserPool: us-east-1_YrRAO2YZe"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/photoalbums-20181117161541-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apiphotoalbums"
+			},
+			"lastPushTimeStamp": "2018-11-18T01:10:41.092Z",
+			"lastPushDirHash": "K6eY1aNtCCyEStjjAbbStHlMrJM="
+		}
+	},
+	"storage": {
+		"photoalbumsstorage": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/photoalbums-20181117161541-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"logicalId": "storagephotoalbumsstorage"
+			},
+			"lastPushTimeStamp": "2018-11-18T01:10:41.107Z",
+			"output": {
+				"BucketName": "photoalbums71cecdc2603a42998e406bac6622dda7",
+				"Region": "us-east-1"
+			},
+			"lastPushDirHash": "BY++xdL7f0m36ayM0ojvVktX+Hs="
+		}
+	}
+}

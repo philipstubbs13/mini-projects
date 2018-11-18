@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "photoalbums",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcognito23cef5ed",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "schemaGraphql": "s3://photoalbums-20181117161541-deployment/amplify-appsync-files/schema.graphql.1542498340693",
+    "ResolverBucket": "photoalbums-20181117161541-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1542498340693"
+}
