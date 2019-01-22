@@ -1,0 +1,11 @@
+{
+  "name": "node_for_beginners",
+  "version": "1.0.0",
+  "description": "Simple test app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Phil Stubbs",
+  "license": "ISC"
+}
