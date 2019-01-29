@@ -1,0 +1,20 @@
+{
+  "name": "nextjs_crash_course",
+  "version": "1.0.0",
+  "description": "* <https://www.youtube.com/watch?v=IkOVe40Sy0U>\r * <https://github.com/bradtraversy/bitzprice>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
