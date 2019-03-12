@@ -1,0 +1,17 @@
+{
+  "name": "push_notifications_node",
+  "version": "1.0.0",
+  "description": "* <https://www.youtube.com/watch?v=HlYFW2zaYQM>\r * <https://tests.peter.sh/notification-generator>\r * Intro to Push Notifications: <https://developers.google.com/web/ilt/pwa/introduction-to-push-notifications>\r * Service Workers: <https://developers.google.com/web/fundamentals/primers/service-workers/>\r * <https://medium.com/samsung-internet-dev/a-beginners-guide-to-service-workers-f76abf1960f6>",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "web-push": "^3.3.3"
+  }
+}
