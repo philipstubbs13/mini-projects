@@ -2,5 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "main": "server.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "uuid": "^3.3.2",
+    "uuidv4": "^2.0.0"
+  }
 }
