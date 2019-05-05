@@ -29,3 +29,16 @@
 * CRUD Apps - Blogs, Shopping Carts, Social Networks
 * Tools & Utilities
 * Short answer: Anthing that is not CPU intensive
+
+## Deploy to heroku
+
+```bash
+heroku login
+git init
+git add .
+git commit -m "initial commit"
+heroku create
+heroku git: remote -a limitless-meadow-87507
+git push heroku master
+heroku open
+```
