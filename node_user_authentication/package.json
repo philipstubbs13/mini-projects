@@ -1,0 +1,18 @@
+{
+  "name": "node_user_authentication",
+  "version": "1.0.0",
+  "description": "* <https://www.youtube.com/watch?v=Ud5xKCYQTjM>",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
