@@ -1,0 +1,22 @@
+{
+  "name": "express_crash_course",
+  "version": "1.0.0",
+  "description": "* <https://www.youtube.com/watch?v=L72fhGm1tfE>\r * Express is a fast, unopinionated and minimalist web framework for Node.js.\r * Express is a server-side or back-end framework. It is not comparable to client-side frameworks like React, Angular, and Vue. It can be used in combination with those frameworks to build full stack apps.\r * Why use express?\r   * Makes building web apps with Node.js MUCH easier.\r   * Used for both server rendered apps as well as API/Microservices.\r   * Extremely light, fast, and free.\r   * Full control of request and response.\r   * Most popular Node framework.\r   * It's all JavaScript.\r * Basic server syntax",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "moment": "^2.24.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
