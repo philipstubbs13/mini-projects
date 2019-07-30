@@ -1,0 +1,15 @@
+{
+  "name": "tailwind_css_crash_course",
+  "version": "1.0.0",
+  "description": "* <https://www.youtube.com/watch?v=UBOj6rqRUME>",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwind build src/style.css -o dist/style.css"
+  }, 
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^1.0.5"
+  }
+}
