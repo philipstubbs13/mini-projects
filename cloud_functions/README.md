@@ -17,3 +17,22 @@ firebase init functions
 firebase deploy --only functions
 firebase deploy --only functions:helloWorld
 ```
+
+## Getting started with node.js on Google Cloud Functions - console & gcloud cli
+
+* <https://www.youtube.com/watch?v=MgivoBkvS5o&list=PLoZcQiQmH1DXzNSvuZ6yx8sXH0WpYGLa6&index=4&t=1s>
+* install google cloud sdk
+
+```bash
+gcloud init
+```
+
+* Deploy functions using node
+
+```bash
+gcloud functions deploy 'testfunc' --runtime nodejs8 --trigger-http --entry-point=myFunction
+```
+
+```bash
+gcloud functions event-types list
+```
