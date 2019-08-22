@@ -103,3 +103,9 @@ ng generate component components/Todos
 ```bash
 ng g s services/Todo
 ```
+
+* Build to deploy to web host
+
+```bash
+ng build
+```
