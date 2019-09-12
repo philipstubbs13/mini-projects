@@ -1,0 +1,14 @@
+{
+  "name": "nodejs_tutorial_crash_course",
+  "version": "1.0.0",
+  "description": "This is just a small crash course on node.",
+  "main": "app.js",
+  "scripts": {
+    "develop": "nodemon app.js"
+  },
+  "author": "Phil Stubbs",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
