@@ -1,0 +1,19 @@
+{
+  "name": "paginated_api_node",
+  "version": "1.0.0",
+  "description": "* <https://www.youtube.com/watch?v=ZX3qt0UWifc>",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
