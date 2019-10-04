@@ -1,4 +1,43 @@
-var stuff = require('./stuff');
+var fs = require('fs');
+
+fs.readFile('README.txt', 'utf8', function(err, data){
+  console.log(data);
+  fs.writeFile('writeMe.txt', data);
+});
+// fs.writeFileSync('writeMe.txt', readMe);
+
+// var events = require('events');
+// var util = require('util');
+
+// var Person = function(name){
+//   this.name = name;
+// };
+
+// util.inherits(Person, events.EventEmitter);
+
+// var james = new Person('james');
+// var mary = new Person('mary');
+// var ryu = new Person('ryu');
+// var people = [james, mary, ryu];
+
+// people.forEach(function(person){
+//   person.on('speak', function(mssg){
+//     console.log(person.name + ' said: ' + mssg);
+//   });
+// });
+
+// james.emit('speak', 'hey dudes');
+// ryu.emit('speak', 'I want a curry.');
+
+// var myEmitter = new events.EventEmitter();
+
+// myEmitter.on('someEvent', function(mssg){
+//   console.log(mssg);
+// });
+
+// myEmitter.emit('someEvent', 'the event was emitted');
+
+// var stuff = require('./stuff');
 
 // console.log(stuff.counter(['shaun', 'crystal', 'ryu']));
 // console.log(stuff.adder(5,6));
