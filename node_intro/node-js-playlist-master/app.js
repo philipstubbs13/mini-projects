@@ -1,9 +1,30 @@
-var fs = require('fs');
+// var fs = require('fs');
 
-fs.readFile('README.txt', 'utf8', function(err, data){
-  console.log(data);
-  fs.writeFile('writeMe.txt', data);
-});
+// Create directory
+// fs.mkdirSync('stuff');
+
+// Delete directory
+// fs.rmdirSync('stuff');
+
+// Create directory async
+// fs.mkdir('stuff', function() {
+//   fs.readFile('README.txt', 'utf8', function(err, data) {
+//     fs.writeFile('./stuff/writeMe.txt', data);
+//   });
+// });
+
+// Delete directory async
+// fs.unlink('./stuff/writeMe.txt', function() {
+//   fs.rmdir('stuff');
+// });
+
+// Delete file
+// fs.unlink('writeMe.txt');
+
+// fs.readFile('README.txt', 'utf8', function(err, data){
+//   console.log(data);
+//   fs.writeFile('writeMe.txt', data);
+// });
 // fs.writeFileSync('writeMe.txt', readMe);
 
 // var events = require('events');
