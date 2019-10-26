@@ -1,6 +1,7 @@
 # D3 Tutorial
 
 * <https://www.youtube.com/watch?v=9qsiJX8aINE>
+* <https://www.youtube.com/watch?v=IpK82JaiG3A>
 * SVG's
   * Scalable Vector Graphics
   * Make them bigger without losing quality.
