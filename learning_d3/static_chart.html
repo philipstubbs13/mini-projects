@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Learning D3</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  </head>
+  <body>
+    <h1>Top Smartphones</h1>>
+    <ul class="items">
+      <li>iPhone 6</li>
+      <li>Galaxy S6</li>
+      <li>LG G3</li>
+      <li>Windows</li>
+      <li>HTC Phone</li>
+    </ul>
+
+    <script>
+      var styles = [
+        {
+          'background': 'red',
+          'color': 'white',
+          'width': '35'
+        },
+        {
+          'background': 'yellow',
+          'color': 'black',
+          'width': '25'
+        },
+        {
+          'background': 'green',
+          'color': 'white',
+          'width': '20'
+        },
+        {
+          'background': 'black',
+          'color': 'white',
+          'width': '10'
+        },
+        {
+          'background': 'orange',
+          'color': 'white',
+          'width': '10'
+        },
+      ];
+
+      d3.selectAll('.items li')
+        .data(styles)
+        .style({
+          'font-size': '18px',
+          'padding': '6px',
+          'margin': '4px',
+          'list-style': 'none',
+          'background': function(d) {
+            return d.background;
+          },
+          'color': function(d) {
+            return d.color;
+          },
+          'width': function(d) {
+            return d.width+ '%';
+          }
+        })
+    </script>
+  </body>
+</html>
