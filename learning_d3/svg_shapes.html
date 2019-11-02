@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Learning D3</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  </head>
+  <body>
+    <h1>SVG Shapes</h1>
+    <!-- <svg width="400" height="400" style="background: #f4f4f4">
+      <rect width="300" height="300" style="fill:rgb(255,0,0);stroke:rgb(0,0,0);stroke-width:1" x="50" y="50" />
+    </svg>
+
+    <svg width="400" height="400" style="background: #f4f4f4">
+      <circle cx="250" cy="250" r="40" stroke="black" stroke-width="1" fill="yellow" />
+    </svg> -->
+
+    <div id="element"></div>
+
+    <script>
+      d3.select('body')
+          .append('svg')
+            .attr('width', 400)
+            .attr('height', 400)
+            .style('background', '#f4f4f4')
+          .append('rect')
+            .attr('width', 300)
+            .attr('height', 300)
+            .attr('x', 50)
+            .attr('y', 50)
+            .style('fill', 'red')
+            .style('stroke', 'black')
+            .style('stroke-width', 1)
+
+          d3.select('svg')
+            .append('circle')
+              .attr('cx', 200)
+              .attr('cy', 200)
+              .attr('r', 50)
+              .style('fill', 'blue')
+    </script>
+  </body>
+</html>
