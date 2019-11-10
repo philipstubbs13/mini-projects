@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.6.0/stitch.js"></script>
+    <script>
+      const client = stitch.Stitch.initializeDefaultAppClient('basic_blog-ctziw');
+
+      const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db('blog');
+
+      client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user =>
+        db.collection('comments').updateOne({owner_id: client.auth.user.id}, {$set:{number:42}}, {upsert:true})
+      ).then(() =>
+        db.collection('comments').find({owner_id: client.auth.user.id}, { limit: 100}).asArray()
+      ).then(docs => {
+          console.log("Found docs", docs)
+          console.log("[MongoDB Stitch] Connected to Stitch")
+      }).catch(err => {
+        console.error(err)
+      }).then(displayComments)
+
+      function addComment(){
+        const newComment = document.getElementById("new_comment");
+
+        db.collection("comments").insertOne({
+          owner_id: client.auth.user.id,
+          comment: newComment.value
+        }).then(displayComments);
+
+        newComment.value = "";
+      }
+
+      function displayComments(){
+        db.collection("comments")
+          .find({})
+          .toArray()
+          .then(docs => {
+            const html = docs.map(doc => doc.comment).join("<br>");
+            document.getElementById("comments").innerHTML = html;
+          })
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Wow! I just watched an amazing video!</h1>
+
+    <div id="content">
+      I want to tell all of my friends how fabulous this video is!
+    </div>
+
+    <hr>
+
+    <div id="comments"></div>
+
+    <hr>
+    Add comment:
+    <input id="new_comment"><input type="submit" onClick="addComment()">
+  </body>
+</html>
