@@ -2,17 +2,18 @@
 
 # Create tuple
 fruits = ('Apples', 'Oranges', 'Grapes')
+
+# Using a constructor
 # fruits2 = tuple(('Apples', 'Oranges', 'Grapes'))
 
 # Single value needs trailing comma
 fruits2 = ('Apples',)
-print(fruits2, type(fruits2))
 
 # Get value
 print(fruits[1])
 
 # Can't change value
-# fruits[0] = 'Pears'
+fruits[0] = 'Pears'
 
 # Delete tuple
 del fruits2
@@ -24,7 +25,7 @@ print(len(fruits))
 # A Set is a collection which is unordered and unindexed. No duplicate members.
 
 # Create set
-fruits_set = { 'Apples', 'Oranges', 'Mango'}
+fruits_set = {'Apples', 'Oranges', 'Mango'}
 
 # Check if in set
 print('Apples' in fruits_set)
@@ -39,9 +40,9 @@ fruits_set.remove('Grape')
 fruits_set.add('Apples')
 
 # Clear set
-# fruits_set.clear()
+fruits_set.clear()
 
 # Delete
-# del fruits_set
+del fruits_set
 
 print(fruits_set)

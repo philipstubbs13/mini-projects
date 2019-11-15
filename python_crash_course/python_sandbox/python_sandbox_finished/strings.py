@@ -4,19 +4,19 @@ name = 'Brad'
 age = 37
 
 # Concatenate
-# print('Hello, my name is ' + name + ' and I am ' + str(age))
+print('Hello, my name is ' + name + ' and I am ' + str(age))
 
 # String Formatting
 
 # Arguments by position
-# print('My name is {name} and I am {age}'.format(name=name, age=age))
+print('My name is {name} and I am {age}'.format(name=name, age=age))
 
 # F-Strings (3.6+)
-# print(f'Hello, my name is {name] and I am {age}')
+print(f'Hello, my name is {name} and I am {age}')
 
 # String Methods
 
-s = 'hello world'
+s = 'helloworld'
 
 # Capitalize string
 print(s.capitalize())
@@ -46,7 +46,6 @@ print(s.startswith('hello'))
 # Ends with
 print(s.endswith('d'))
 
-
 # Split into a list
 print(s.split())
 
@@ -59,5 +58,5 @@ print(s.isalnum())
 # Is all alphabetic
 print(s.isalpha())
 
-# is all numeric
+# Is all numeric
 print(s.isnumeric())
