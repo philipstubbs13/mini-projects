@@ -34,3 +34,11 @@
     * PUT request to http://www.ninjago.com/api/ninjas/id
   * Delete data:
     * DELETE request to http://www.ninjago.com/api/ninjas/id
+* Models
+  * Models represent collections in MongoDB.
+  * User Model to represent a collection of Users.
+  * Ninja Model to represent a collection of Ninjas.
+* Schemas define the structure of our data objects.
+* Mongoose
+  * Adds a layer of methods to easily save, edit, retrieve and delete data from mongodb.
+  * Allows us to create our Models and Schemas easily.
