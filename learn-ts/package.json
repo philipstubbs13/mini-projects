@@ -1,0 +1,11 @@
+{
+  "name": "learn-ts",
+  "version": "1.0.0",
+  "description": "learn typescript",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Phil Stubbs",
+  "license": "MIT"
+}
