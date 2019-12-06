@@ -124,3 +124,91 @@ SyntaxError: EOL while scanning string literal
 >>> len(greet)
 5
 ```
+
+## Lists
+
+```bash
+>>> str = "hello there dudes"
+>>> str.split(' ')
+['hello', 'there', 'dudes']
+>>> fib1 = [1, 1, 2, 3, 5, 8, 13]
+>>> fib1
+[1, 1, 2, 3, 5, 8, 13]
+>>> fib[2]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'fib' is not defined
+>>> fib1[2]
+2
+>>> fib1[5]
+8
+>>> fib1[-1]
+13
+>>> fib1[-3]
+5
+>>> fib1[0]
+1
+>>> fib1[0:4]
+[1, 1, 2, 3]
+>>> fib2 = [21, 34, 55]
+>>> fib1 + fib2
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+>>> fib1
+[1, 1, 2, 3, 5, 8, 13]
+>>> fib1[0] = 9
+>>> fib1
+[9, 1, 2, 3, 5, 8, 13]
+>>> fib1[0] = 1
+>>> fib1
+[1, 1, 2, 3, 5, 8, 13]
+>>> fib = fib1 + fib2
+>>> fib
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+>>> fib.append(89)
+>>> fib
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+>>> fib.pop()
+89
+>>> fib
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+>>> fib.append(89)
+>>> fib1
+[1, 1, 2, 3, 5, 8, 13]
+>>> fib
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+>>> fib.remove(89)
+>>> fib
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+>>> fib.append(89)
+>>> fib.append(89)
+>>> fib
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 89]
+>>> fib.remove(89)
+>>> fib
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+>>> del(fib[10])
+>>> fib
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+>>> del(fib[3])
+>>> fib
+[1, 1, 2, 5, 8, 13, 21, 34, 55]
+>>> chars = ['mario', 'luigi', 'bowser']
+>>> chars
+['mario', 'luigi', 'bowser']
+>>> chars.append(5)
+>>> chars
+['mario', 'luigi', 'bowser', 5]
+>>> nums = []
+>>> nums = [chars, fib1, [1, 2, 3, 4]]
+>>> nums
+[['mario', 'luigi', 'bowser', 5], [1, 1, 2, 3, 5, 8, 13], [1, 2, 3, 4]]
+>>> nums[0]
+['mario', 'luigi', 'bowser', 5]
+>>> nums[1]
+[1, 1, 2, 3, 5, 8, 13]
+>>> nums[2]
+[1, 2, 3, 4]
+>>> nums[2][1]
+2
+>>>    
+```
