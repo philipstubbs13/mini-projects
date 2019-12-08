@@ -212,3 +212,64 @@ NameError: name 'fib' is not defined
 2
 >>>    
 ```
+
+## Dictionaries
+
+```bash
+>>> ninja_belts = {}
+>>> ninja_belts = { "crystal": "red", "ryu": "black"}
+>>> ninja_belts
+{'crystal': 'red', 'ryu': 'black'}
+>>> ninja_belts['crystal']
+'red'
+>>> ninja_belts['ryu']
+'black'
+>>> ninja_belts['yoshi']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'yoshi'
+>>> 'yoshi' in ninja_belts
+False
+>>> 'ryu' in ninja_belts
+True
+>>> ninja_belts.keys()
+dict_keys(['crystal', 'ryu'])
+>>> list(ninja_belts.keys())
+['crystal', 'ryu']
+>>> ninja_belts.values()
+dict_values(['red', 'black'])
+>>> vals = list(ninja_belts.values())
+>>> vals
+['red', 'black']
+>>> vals.count('black')
+1
+>>> vals.count('red')
+1
+>>> vals.count('blue')
+0
+>>> ninja_belts['yoshi'] = 'red'
+>>> ninja_belts
+{'crystal': 'red', 'ryu': 'black', 'yoshi': 'red'}
+>>> person = dict(name="shaun", age=27)
+>>> person = dict(name="shaun", age=27, height="6ft")
+>>> person
+{'name': 'shaun', 'age': 27, 'height': '6ft'}
+```
+
+## Sorting and Sets
+
+>>> nums = [1, 4, 2, 7, 3, 8, 3, 4, 8, 1]
+>>> sorted(nums)
+[1, 1, 2, 3, 3, 4, 4, 7, 8, 8]
+>>> names = ['shaun', 'ryu', 'abe', 'Apple', 'Brian', 'shaun']
+>>> sorted(names)
+['Apple', 'Brian', 'abe', 'ryu', 'shaun', 'shaun']
+>>> set(nums)
+{1, 2, 3, 4, 7, 8}
+>>> set(names)
+{'Brian', 'shaun', 'Apple', 'abe', 'ryu'}
+>>> ninjas = {'ryu': 'black', 'yoshi': 'red', 'crystal': 'black'}
+>>> ninjas.values()
+dict_values(['black', 'red', 'black'])
+>>> set(ninjas.values())
+{'black', 'red'}
