@@ -13,3 +13,11 @@ tsc sandbox.ts
 ```bash
 tsc sandbox.ts -w
 ```
+
+```bash
+tsc --init
+```
+
+```bash
+tsc -watch
+```
