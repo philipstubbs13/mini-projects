@@ -1,6 +1,7 @@
 # Deno Crash Course
 
 * <https://www.youtube.com/watch?v=NHHhiqwcfRM>
+* <https://www.youtube.com/watch?v=KuaI6mphFNc&t=2s>
 * A JavaScript/TypeScript runtime based on the V8 JavaScript engined and the Rust programming language.
 * Created by Ryan Dahl, who is also the creator of Node.js
 * De-Centralized Packages
