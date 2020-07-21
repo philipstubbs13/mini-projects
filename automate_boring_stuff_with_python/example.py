@@ -17,3 +17,13 @@
 # print('Hello', end='')
 # print('World')
 # print('cat', 'dog', 'mouse', sep='ABC')
+
+
+
+spam = 42 # global variable
+
+def eggs():
+  spam = 42 # local varable
+
+print('Some code here')
+print('Some more code')
