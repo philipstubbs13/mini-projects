@@ -88,3 +88,16 @@ h4{
     font-size: 20px;
   }
 }
+
+/*  grid testing */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.projects a {
+  text-align: center;
+  background: grey;
+  padding: 20px;
+}
