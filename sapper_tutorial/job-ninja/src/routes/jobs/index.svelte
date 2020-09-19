@@ -38,7 +38,7 @@
 <ul>
   {#each jobs as job}
     <li>
-      <a href={`jobs/${job.id}`}>{job.title}</a>
+      <a rel=prefetch href={`jobs/${job.id}`}>{job.title}</a>
     </li>
   {/each}
 </ul>
