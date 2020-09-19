@@ -12,7 +12,26 @@
 </script>
 
 <style>
-
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+  li a {
+    display: block;
+    padding: 15px;
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    margin: 10px auto;
+    text-decoration: none;
+  }
+  li a:hover {
+    background: #fbfbfb;
+  }
+  div {
+    text-align: center;
+  }
 </style>
 
 <h2>All Current Jobs</h2>
@@ -23,3 +42,7 @@
     </li>
   {/each}
 </ul>
+
+<div>
+  <a href="jobs/create" class="btn">Add a New Job</a>
+</div>
