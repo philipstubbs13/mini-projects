@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from '../../styles/Home.module.scss'
+import { useState } from 'react';
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env
 
@@ -23,7 +24,7 @@ export const getStaticProps = async ({ params }) => {
   const post = await getPost(params.slug)
   return {
     props: { post },
-    revalidate: 10
+    revalidate: 10 // at most 1 request to the ghost cms in the backend.
   }
 }
 
@@ -49,11 +50,26 @@ const Post: React.FC<{ post: Post }> = props => {
   console.log(props);
 
   const { post } = props;
+  const [enableLoadComments, setEnableLoadComments] = useState<boolean>(true);
 
   const router = useRouter()
 
   if (router.isFallback) {
     return <h1>Loading...</h1>
+  }
+
+  function loadComments() {
+    setEnableLoadComments(false);
+    ; (window as any).disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = post.slug;
+    };
+
+    const script = document.createElement('script')
+    script.src = 'https://ghostcms-nextjs-10.disqus.com/embed.js'
+    script.setAttribute('data-timestamp', Date.now().toString());
+
+    document.body.appendChild(script);
   }
 
   return (
@@ -63,6 +79,14 @@ const Post: React.FC<{ post: Post }> = props => {
       </Link>
       <h1>{post.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+
+      {enableLoadComments && (
+        <p className={styles.goback} onClick={loadComments}>
+          Load Comments
+        </p>
+      )}
+
+      <div id="disqus_thread"></div>
     </div>
   )
 }
