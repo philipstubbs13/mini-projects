@@ -1,9 +1,26 @@
-console.log(1);
-console.log(2);
+const request = new XMLHttpRequest();
 
-setTimeout(() => {
-  console.log('callback function fired');
-}, 2000);
+request.addEventListener('readystatechange', () => {
+  // console.log(request, request.readyState);
+  if (request.readyState === 4) {
+    console.log(request.responseText);
+  }
+})
 
-console.log(3);
-console.log(4);
+request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');
+request.send();
+
+
+
+
+
+
+// console.log(1);
+// console.log(2);
+
+// setTimeout(() => {
+//   console.log('callback function fired');
+// }, 2000);
+
+// console.log(3);
+// console.log(4);

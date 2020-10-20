@@ -6,3 +6,7 @@
 * Synchronous JavaScript
   * JavaScript can run one statement at a time.
 * Single Threaded
+* HTTP Requests
+  * Make HTTP requests to get data from another server.
+  * We make thse requests to API endpoints.
+  
