@@ -1,0 +1,112 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.44.2",
+  "hash": "37dfa6ff2a2277006597",
+  "publicPath": "/static/",
+  "outputPath": "C:\\Users\\phili\\Desktop\\coding_projects\\mini-projects\\frontity_wordpress_theme_with_react\\frontity\\build\\static",
+  "assetsByChunkName": {
+    "frontity": [
+      "frontity.module.js",
+      "frontity.afc12a8866b2376ab8d7.hot-update.js"
+    ],
+    "list": "list.module.js"
+  },
+  "assets": [
+    {
+      "name": "afc12a8866b2376ab8d7.hot-update.json",
+      "size": 50,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "frontity.afc12a8866b2376ab8d7.hot-update.js",
+      "size": 24116,
+      "chunks": [
+        "frontity"
+      ],
+      "chunkNames": [
+        "frontity"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "frontity.module.js",
+      "size": 5402353,
+      "chunks": [
+        "frontity"
+      ],
+      "chunkNames": [
+        "frontity"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "list.module.js",
+      "size": 49365,
+      "chunks": [
+        "list"
+      ],
+      "chunkNames": [
+        "list"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "frontity": {
+      "chunks": [
+        "frontity"
+      ],
+      "assets": [
+        "frontity.module.js",
+        "frontity.afc12a8866b2376ab8d7.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "frontity": {
+      "chunks": [
+        "frontity"
+      ],
+      "assets": [
+        "frontity.module.js",
+        "frontity.afc12a8866b2376ab8d7.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "list": {
+      "chunks": [
+        "list"
+      ],
+      "assets": [
+        "list.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  },
+  "children": []
+}
