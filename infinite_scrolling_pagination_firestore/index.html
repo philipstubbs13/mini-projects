@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Firestore Pagination</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container"></div>
+
+  <div class="load-more">
+    <button>Load More</button>
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBnGlXIfsYZKixjX9G4_uWwt76huyuenzA",
+      authDomain: "pagination-scroll-449d9.firebaseapp.com",
+      databaseURL: "https://pagination-scroll-449d9.firebaseio.com",
+      projectId: "pagination-scroll-449d9",
+      storageBucket: "pagination-scroll-449d9.appspot.com",
+      messagingSenderId: "110177559071",
+      appId: "1:110177559071:web:0879f7dae219fa5e952b2a"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>
