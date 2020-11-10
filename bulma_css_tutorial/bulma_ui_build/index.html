@@ -67,14 +67,44 @@
     <div class="container">
       <div class="columns is-8 is-variable">
         <div class="column is-7-tablet">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolore dignissimos accusamus, libero vel
-            maiores quia beatae modi ducimus, repudiandae necessitatibus dolores corporis voluptates aspernatur et. Sit
-            laboriosam autem magni.</p>
+          <!-- tabbed content -->
+          <div class="tabs is-boxed">
+            <ul>
+              <li class="is-active" data-target="product-details">
+                <a>Product Details</a>
+              </li>
+              <li data-target="delivery-information">
+                <a>Delivery Information</a>
+              </li>
+            </ul>
+          </div>
+          <div class="px-2" id="tab-content">
+            <div id="product-details">
+              <h3 class="is-size-5 title">Product Details</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore necessitatibus aliquid perferendis
+                eaque iusto obcaecati harum? Veritatis sequi obcaecati illum ullam labore magni suscipit temporibus,
+                quisquam repellendus quam quia rem?</p>
+            </div>
+            <div id="delivery-information" class="is-hidden">
+              <h3 class="is-size-5 title">Delivery Information</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore necessitatibus aliquid perferendis
+                eaque iusto obcaecati harum? Veritatis sequi obcaecati illum ullam labore magni suscipit temporibus,
+                quisquam repellendus quam quia rem?</p>
+            </div>
+          </div>
         </div>
         <div class="column is-5-tablet">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore facere soluta quam commodi doloremque,
-            ipsam nihil expedita nesciunt libero itaque consectetur assumenda exercitationem cum deleniti dolorum! Nam
-            sapiente libero nihil!</p>
+          <!-- message box -->
+          <div class="message">
+            <div class="message-header">
+              <p>Earn Points with the Coffee Club</p>
+            </div>
+            <div class="message-body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloribus quibusdam ipsam. Fugit
+                porro quos veniam nisi omnis doloribus consectetur id sint suscipit. Perferendis id voluptates vitae cum
+                modi totam.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
