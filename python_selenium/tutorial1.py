@@ -6,35 +6,64 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+from selenium.webdriver.common.action_chains import ActionChains
 
 PATH = "C:\Program Files (x86)\chromedriver.exe"
 driver = webdriver.Chrome(PATH)
+driver.get("https://orteil.dashnet.org/cookieclicker/")
 
-driver.get("https://techwithtim.net")
+driver.implicitly_wait(5)
 
-link = driver.find_element_by_link_text("Python Programming")
-link.click()
+cookie = driver.find_element_by_id("bigCookie")
+cookie_count = driver.find_element_by_id("cookies")
+items = [driver.find_element_by_id("productPrice" + str(i)) for i in range(1, -1, -1)]
 
-try:
-  element = WebDriverWait(driver, 10).until(
-    EC.presence_of_element_located((By.LINK_TEXT, "Beginner Python Tutorials"))
-  )
-  # element.clear()
-  element.click()
+actions = ActionChains(driver)
+actions.click(cookie)
 
-  element = WebDriverWait(driver, 10).until(
-    EC.presence_of_element_located((By.ID, "sow-button-19310003"))
-  )
-  element.click()
+for i in range(5000):
+  actions.perform()
+  count = int(cookie_count.text.split(" ")[0])
+  for item in items:
+    value = int(item.text)
+    if value <= count:
+      upgrade_actions = ActionChains(driver)
+      upgrade_actions.move_to_element(item)
+      upgrade_actions.click()
+      upgrade_actions.perform()
 
-  driver.back()
-  driver.back()
-  driver.back()
-  driver.forward()
-  driver.forward()
 
-except:
-  driver.quit()
+
+
+
+# driver.get("https://techwithtim.net")
+# link = driver.find_element_by_link_text("Python Programming")
+# link.click()
+
+# try:
+#   element = WebDriverWait(driver, 10).until(
+#     EC.presence_of_element_located((By.LINK_TEXT, "Beginner Python Tutorials"))
+#   )
+#   # element.clear()
+#   element.click()
+
+#   element = WebDriverWait(driver, 10).until(
+#     EC.presence_of_element_located((By.ID, "sow-button-19310003"))
+#   )
+#   element.click()
+
+#   driver.back()
+#   driver.back()
+#   driver.back()
+#   driver.forward()
+#   driver.forward()
+
+# except:
+#   driver.quit()
+
+
+
+
 
 
 # print(driver.title)
