@@ -24,7 +24,7 @@ export const get_book = (ctx: Context) => {
 export const create_book = async (ctx: Context) => {
   const { title, author, pages } = await ctx.body();
 
-  // validate data and types of the data
+  // validate data & types of data
   const id = v4.generate();
   const book = { id, title, author, pages };
   books.push(book);

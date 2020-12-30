@@ -69,7 +69,6 @@ ul {
 /* Section Top */
 .section-top {
 	min-height: 500px;
-	background: url('https://i.ibb.co/PhVR2Vh/bg1.png') no-repeat center center/cover;
 }
 
 .section-top h1 {
@@ -87,7 +86,6 @@ ul {
 /* Section Stream */
 .section-stream {
 	min-height: 700px;
-	background: url('https://i.ibb.co/bsX6RV0/bg2.png') no-repeat center center/cover;
 }
 
 .section-stream h2 {

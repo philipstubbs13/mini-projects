@@ -19,4 +19,7 @@
 * Behavior Driven Development
   * is like creating a plan before you code your program.
   * write tests first, code second.
-  
+* Red > Green > Refactor
+  * Write the tests, even though they fail
+  * write the easiest code we can that passes the test.
+  * Go back and improve the code.

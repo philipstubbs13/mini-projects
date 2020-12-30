@@ -15,10 +15,10 @@ import re
 # mo = phoneNumberRegex.search('My number is (415)-555-4242')
 # print(mo.group())
 
-batRegex = re.compile(r'Bat(man|mobile|copter|bat)')
-mo = batRegex.search('Batmobile lost a wheel')
-print(mo.group())
-print(mo.group(1))
+# batRegex = re.compile(r'Bat(man|mobile|copter|bat)')
+# mo = batRegex.search('Batmobile lost a wheel')
+# print(mo.group())
+# print(mo.group(1))
 
 # def isPhoneNumber(text):
 #   if len(text) != 12:
