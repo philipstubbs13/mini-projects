@@ -19,6 +19,12 @@
     people = people.filter((person) => person.id != id);
   }
 
+  const addPerson = (e) => {
+    const person = e.detail;
+    people = [person, ...people];
+    showModal = false;
+  };
+
   let num = 25;
 </script>
 
@@ -32,7 +38,7 @@
 
 
 <Modal {showModal} on:click={toggleModal}>
-  <AddPersonForm />
+  <AddPersonForm on:addPerson={addPerson} />
 </Modal>
 <main>
   <button on:click={toggleModal}>Open Modal</button>
