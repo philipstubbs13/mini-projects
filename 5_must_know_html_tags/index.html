@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Favorites</legend>
+
+      <div>
+        <label>Color</label>
+      </div>
+
+      <div>
+        <input type="color">
+
+        <progress value="50" max="100">50%</progress>
+      </div>
+
+      <!-- <div>
+        <input list="color-list" type="text">
+        <datalist id="color-list">
+          <option value="Red">
+          <option value="Green">
+          <option value="Blue">
+          <option value="Yellow">
+          <option value="Black">
+          <option value="White">
+          <option value="Purple">
+          <option value="Cyan">
+          <option value="Pink">
+        </datalist>
+      </div> -->
+
+      <br>
+
+      <div>
+        <label>Fruit</label>
+      </div>
+      <div>
+        <input list="fruit-list" type="text">
+        <datalist id="fruit-list">
+          <option value="Banana">
+          <option value="Strawberry">
+          <option value="Blackberry">
+          <option value="Yellow">
+          <option value="Blueberry">
+          <option value="Peach">
+          <option value="Pear">
+        </datalist>
+      </div>
+    </fieldset>
+  </form>
+
+  <p>H<sub>2</sub>0</p>
+  <p>O<sub>2</sub></p>
+  <p>X<sup>2</sup> * y<sup>4</sup></p>
+
+  <picture>
+    <!-- <source srcset="logo.webp" type="image/webp" -->
+    <source srcset="logo-Grey.png" media="(min-width: 900px)">
+    <img src="logo.png" style="width: 700px">
+  </picture>
+
+  <template>
+    <h5>This is a template
+      <small>Hi</small>
+    </h5>
+  </template>
+
+  <script>
+    const template = document.querySelector('template');
+    const content = template.content.cloneNode(true);
+    document.body.append(content);
+  </script>
+</body>
+</html>
