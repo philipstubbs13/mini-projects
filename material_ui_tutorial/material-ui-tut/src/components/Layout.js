@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles, Drawer, Typography, List, ListItem, ListItemIcon, ListItemText, AppBar, Toolbar } from '@material-ui/core'
+import { makeStyles, Drawer, Typography, List, ListItem, ListItemIcon, ListItemText, AppBar, Toolbar, Avatar } from '@material-ui/core'
 import { SubjectOutlined, AddCircleOutlineOutlined } from '@material-ui/icons'
 import { useHistory, useLocation } from 'react-router-dom'
 import { format } from 'date-fns'
@@ -34,6 +34,9 @@ const useStyles = makeStyles((theme) => {
     toolbar: theme.mixins.toolbar,
     date: {
       flexGrow: 1
+    },
+    avatar: {
+      marginLeft: theme.spacing(2)
     }
   }
 })
@@ -70,6 +73,7 @@ export default function Layout({ children }) {
           <Typography>
             Mario
           </Typography>
+          <Avatar src="/mario-av.png" className={classes.avatar} />
         </Toolbar>
       </AppBar>
 
