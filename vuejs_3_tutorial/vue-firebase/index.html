@@ -4,8 +4,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learning Vue</title>
+  <script src="https://unpkg.com/vue@3.0.2"></script>
 </head>
 <body>
   <h1>Hello Vue :)</h1>
+
+  <div id="app">
+    <div v-if="showBooks">
+      <p>{{ title }} - {{ author }} - {{ age }}</p>
+    </div>
+
+    <button @click="toggleShowBooks">
+      <span v-if="showBooks">Hide Books</span>
+      <span v-else>Show Books</span>
+    </button>
+
+    <div v-show="showBooks">currently showing books</div>
+
+    <button v-on:click="age++">Increase age</button>
+    <button v-on:click="age--">Decrease age</button>
+    <div @click="changeTitle('Oathbringer')">Change book title</div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
