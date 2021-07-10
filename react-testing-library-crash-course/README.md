@@ -10,4 +10,10 @@
   * Unit Tests
   * Integration Tests
   * End to End (E2E) Tests
+* Structure of Tests
+  * Test Block
+    * Render a component we want to test
+    * Find element we want to interact with
+    * Interact with those elements
+    * Assert that the results are as expected.
   
