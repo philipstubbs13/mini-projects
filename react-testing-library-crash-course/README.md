@@ -19,4 +19,8 @@
 * Intro to Query Methods
 
 ![query methods](./query_methods.png)
+
+* Priority
+
+![priority](./priority.png)
   
