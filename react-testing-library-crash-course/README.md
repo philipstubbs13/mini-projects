@@ -16,4 +16,7 @@
     * Find element we want to interact with
     * Interact with those elements
     * Assert that the results are as expected.
+* Intro to Query Methods
+
+![query methods](./query_methods.png)
   
