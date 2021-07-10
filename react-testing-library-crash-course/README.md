@@ -6,4 +6,8 @@
   * Increase Confidence in Application
   * Speed up QA Time
   * Can Serve as Documentations
+* Types of Tests
+  * Unit Tests
+  * Integration Tests
+  * End to End (E2E) Tests
   
