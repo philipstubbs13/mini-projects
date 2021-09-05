@@ -14,3 +14,9 @@
     * User interactions
     * Conditional rendering
     * Utils/Hooks
+* Testing Playground
+  * <https://testing-playground.com/>
+  * <https://chrome.google.com/webstore/detail/testing-playground/hejbmebodbijjdhflfknehhcgaklhano/related?hl=en>
+* Wrap up
+  * always remember why you test
+  * set priorities
