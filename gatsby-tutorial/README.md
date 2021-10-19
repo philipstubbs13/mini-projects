@@ -14,3 +14,4 @@
 * gatsby and data
   * use many different data sources for your website
   * gatsby combines all sources into a unified graphql layer
+* <https://www.gatsbyjs.com/starters>
