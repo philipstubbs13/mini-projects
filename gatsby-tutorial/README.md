@@ -15,3 +15,5 @@
   * use many different data sources for your website
   * gatsby combines all sources into a unified graphql layer
 * <https://www.gatsbyjs.com/starters>
+* gatsby brings all data sources together into a single graphql layer
+  * it calls this the content mesh
