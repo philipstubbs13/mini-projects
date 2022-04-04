@@ -1,0 +1,16 @@
+{
+  "name": "temporal-api",
+  "version": "1.0.0",
+  "description": "* <https://www.youtube.com/watch?v=oOK3UzLJ_Cs>",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@js-temporal/polyfill": "^0.4.0",
+    "snowpack": "^3.8.8"
+  }
+}
