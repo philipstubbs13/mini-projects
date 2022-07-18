@@ -28,3 +28,9 @@
         * Create a new execution context for each function call.
 * Hoisting
     * often referred to as the process where the interpreter appears to move the declaration of functions and variables to the top of their scope prior to the execution of code.
+
+# Asynchronous JavaScript, Task Queue, and Event Loop
+
+* <https://www.youtube.com/watch?v=28AXSTCpsyU>
+* Blocking refers to operations that block further execution until that operation completes.
+* Non-Blocking refers to code that does not block execution.
