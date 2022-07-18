@@ -29,8 +29,22 @@
 * Hoisting
     * often referred to as the process where the interpreter appears to move the declaration of functions and variables to the top of their scope prior to the execution of code.
 
-# Asynchronous JavaScript, Task Queue, and Event Loop
+## Asynchronous JavaScript, Task Queue, and Event Loop
 
 * <https://www.youtube.com/watch?v=28AXSTCpsyU>
 * Blocking refers to operations that block further execution until that operation completes.
 * Non-Blocking refers to code that does not block execution.
+
+## Memory Storage
+
+* <https://www.youtube.com/watch?v=Hci9Bb4_fkA>
+* Higher level languages like JavaScript, Python, and C# automatically allocates memory when objects are created and frees it when they are not used any more. This process is called garbage collection.
+* Primitive Types: Stored directly in the "stack", where it is accessed from
+    * String, Number, Boolean, Null, Undefined, Symbol, BigInt
+* Reference Types: Stored in the heap and accessed by reference.
+    * Arrays, Functions, Objects
+
+## JavaScript Engines
+
+* <https://www.youtube.com/watch?v=oc6faXVc54E>
+
