@@ -47,4 +47,14 @@
 ## JavaScript Engines
 
 * <https://www.youtube.com/watch?v=oc6faXVc54E>
+* Software component that executes JavaScript code.
+* Each Browser uses a specific JavaScript engine.
+    * Mozilla Firefox - SpiderMonkey
+    * Chrome - V8 Engine
+    * Safari - JavaScriptCore
+    * Edge/IE - Chakra
+* Compiled languages are compiled directly to machine code all at once.
+* Interpreted languages are interpreted line by line
+* Compiled languages have a slow write-time and fast run-time and interpreted languages have the opposite.
+* <https://astexplorer.net/>
 
